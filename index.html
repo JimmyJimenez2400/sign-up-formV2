@@ -25,28 +25,38 @@
             </header>
             <form action="#" method="get">
                 <fieldset>
-                    <legend>Let's do this!</legend>
+                    <h3>Let's do this!</h3>
                     <ul>
                         <li class="form-row">
                             <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="user_firstName" required  />
+                            <input type="text" id="firstName" name="user_firstName" placeholder="John" required  place=""/>
                         </li>
                         <li class="form-row">
                             <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="user_lastName" required />
+                            <input type="text" id="lastName" name="user_lastName" placeholder ="Doe" required />
                         </li>
                         <li class="form-row">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="user_email" required />
+                            <input type="email" id="email" name="user_email" placeholder="JohnDoe@gmail.com" required />
                         </li>
                         <li class="form-row">
                             <label for="phoneNumber">Phone Number</label>
-                            <input type="text">
+                            <input type="text" id="phoneNumber" name="user_phoneNumber" placeholder="(932)-332-1323" pattern=".?(\\d{3}).*(\\d{3}).*(\\d{4})" inputmode="numeric" required>
+                        </li>
+                        <li class="form-row">
+                            <label for="pwd">Password</label>
+                            <input type="password" id="pwd" name="user_pwd" class="error" required>
+                            <span></span>
+                        </li>
+                        <li class="form-row">
+                            <label for="pwdMatch">Confirm Password</label>
+                            <input type="password" id="pwdMatch" name="user_pwdMatch" class="error" required>
+                            <span></span>
                         </li>
                     </ul>
                 </fieldset>
                 <button type="submit">Create Your Bee</button>
-                <p>Already have an account? <a href="#">Log In</a></p>
+                <p class="haveAccount">Already have an account? <a href="#">Log In</a></p>
             </form>
         </div>
     </div>
