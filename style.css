@@ -3,6 +3,7 @@
 --white: #FFFFFF;
 --aqua:#7FDBFF;
 --navy: #001f3f;
+--dirty-green-color: #596D48;
 --mobile-logo: 3rem;
 --main: calc(100vh - calc(var(--mobile-logo)));
 }
@@ -12,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 body{
@@ -32,12 +34,29 @@ img{
     object-fit: cover;
 }
 
+a{
+    text-decoration: none;
+}
+
 ul{
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
+input{
+    appearance: none;
+    height: 50px;
+}
+
+input, button{
+    display: block;
+    font-family: inherit;
+    font-size: 100%;
+    width: 100%;
+    padding: 5px;
+    
+}
 
 .yellow-text{
     color: var(--yellow);
@@ -82,13 +101,12 @@ ul{
 
 .mobile-textOverImg h1{
     color: var(--aqua);
-    font-size: 3rem;
-    line-height:1.9em;
+    font-size: clamp(4rem, 50%, 20rem);
+    line-height:1.5em;
     vertical-align: middle;
 }
 
 #form-container{
-    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -100,3 +118,89 @@ header > h3, header > p{
 }
 
 
+.intro-form-header p{
+    font-weight: bold;
+    font-size: clamp(1.6rem, 50%, 20rem);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+fieldset{
+    position: relative;
+    margin-bottom: 50px;
+    border: none;
+    box-shadow: 0px 0px 30px rgba(255, 250, 96, 0.4);
+}
+
+fieldset h3{
+    margin: 20px 0;
+    font-size: clamp(1.6rem, 50%, 20rem);
+}
+
+.form-row{
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.form-row label{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.form-row input[type="text"]{
+    width: 100%;
+    border: 1px solid #333;
+}
+
+.form-row input[type="text"]:focus, input[type="email"]:focus{
+    border: 2px solid blue;
+    box-shadow: 2px 20px 50px rgba(141, 159, 25, 0.4);
+}
+
+.error:invalid{
+    border: 2px solid red;
+}
+
+.error:valid{
+    border: 2px solid green;
+}
+
+form button{
+    width: 50%;
+    border: none;
+    border-radius: 3px;
+    font-size: clamp(2rem, 50%, 20rem);
+    align-self: center;
+    padding: 30px 40px;
+    color: var(--navy);
+    background-color: var(--yellow);
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: rgb(255, 255, 82);
+}
+
+form button:active{
+    background-color: darkgoldenrod;
+}
+
+form .haveAccount{
+    align-self: center;
+    font-size: clamp(2rem, 50%, 20rem);
+}
+
+form .haveAccount a{
+    color: var(--yellow)
+}
+
+form .haveAccount a:active{
+    color: rgb(151, 151, 53);
+}
