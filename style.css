@@ -4,6 +4,7 @@
 --aqua:#7FDBFF;
 --orange: #ff8928;
 --navy: #001f3f;
+--bright-green: rgb(44, 222, 44);
 --dirty-green-color: #596D48;
 --mobile-logo: 3rem;
 --main: calc(100vh - calc(var(--mobile-logo)));
@@ -170,19 +171,19 @@ fieldset h3{
 }
 
 .form-row input[type="text"]:valid, .form-row input[type="email"]:valid{
-    border: 3px solid var(--dirty-green-color);
+    border: 3px solid var(--bright-green);
 }
 
 .form-row input[type="text"]:invalid, .form-row input[type="email"]:invalid{
-    border: 2px solid red;
+    border: 3px solid red;
 }
 
 .error:invalid{
-    border: 2px solid red;
+    border: 3px solid red;
 }
 
 .error:valid{
-    border: 2px solid var(--dirty-green-color);
+    border: 3px solid var(--bright-green);
 }
 
 form button{
