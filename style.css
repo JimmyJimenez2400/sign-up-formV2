@@ -1,7 +1,8 @@
 :root{
---yellow: #FFDC00;
+--yellow: #ffde22;
 --white: #FFFFFF;
 --aqua:#7FDBFF;
+--orange: #ff8928;
 --navy: #001f3f;
 --dirty-green-color: #596D48;
 --mobile-logo: 3rem;
@@ -17,8 +18,8 @@
 }
 
 body{
-    color: var(--white);
-    background-color: var(--navy);
+    color: var(--navy);
+    background-color: var(--yellow);
     line-height: calc(1.4em + 0.5vw);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: calc(16px + 1vw);
@@ -63,6 +64,11 @@ input, button{
     font-weight: bold;
 }
 
+.orange-text{
+    color: var(--orange);
+    font-weight: bold;
+}
+
 
 .container{
     display: flex;
@@ -100,7 +106,7 @@ input, button{
 
 
 .mobile-textOverImg h1{
-    color: var(--aqua);
+    color: white;
     font-size: clamp(4rem, 50%, 20rem);
     line-height:1.5em;
     vertical-align: middle;
@@ -132,7 +138,7 @@ fieldset{
     position: relative;
     margin-bottom: 50px;
     border: none;
-    box-shadow: 0px 0px 30px rgba(255, 250, 96, 0.4);
+    box-shadow: 0px 0px 30px rgba(4, 4, 4, 0.4);
 }
 
 fieldset h3{
@@ -163,12 +169,20 @@ fieldset h3{
     box-shadow: 2px 20px 50px rgba(141, 159, 25, 0.4);
 }
 
+.form-row input[type="text"]:valid, .form-row input[type="email"]:valid{
+    border: 3px solid var(--dirty-green-color);
+}
+
+.form-row input[type="text"]:invalid, .form-row input[type="email"]:invalid{
+    border: 2px solid red;
+}
+
 .error:invalid{
     border: 2px solid red;
 }
 
 .error:valid{
-    border: 2px solid green;
+    border: 2px solid var(--dirty-green-color);
 }
 
 form button{
@@ -179,13 +193,13 @@ form button{
     align-self: center;
     padding: 30px 40px;
     color: var(--navy);
-    background-color: var(--yellow);
+    background-color: var(--orange);
     margin-bottom: 20px;
     cursor: pointer;
 }
 
 form button:hover{
-    background-color: rgb(255, 255, 82);
+    background-color: var(--dirty-green-color);
 }
 
 form button:active{
@@ -198,9 +212,9 @@ form .haveAccount{
 }
 
 form .haveAccount a{
-    color: var(--yellow)
+    color: orange;
 }
 
 form .haveAccount a:active{
-    color: rgb(151, 151, 53);
+    color: var(--dirty-green-color);
 }
