@@ -251,7 +251,6 @@ form .haveAccount a:active{
         font-size: calc(16px + 0.2vw)
       
     }
-
     
 
 
@@ -289,14 +288,18 @@ form .haveAccount a:active{
         width: 100%;
     }
 
+    .intro-form-header{
+        padding: 10px 60px;
+    }
+
     .intro-form-header h3{
-        font-size: clamp(24px, 50%, 20rem);
+        font-size: clamp(19px, 1rem, 100rem);
         margin-bottom: 20px;
     }
 
     .intro-form-header p{
-        font-size: clamp(15px, 50%, 3rem);
-        margin-bottom: 0;
+        font-size: clamp(20px, 50%, 100rem);
+        margin-bottom: 20px;
     }
 
     form{
@@ -307,8 +310,8 @@ form .haveAccount a:active{
     }
 
     fieldset{
-        margin-bottom: 0px;
-        flex: 0;
+        margin-bottom: 20px;
+        padding: 10px 60px;
     }
 
     ul{
@@ -333,7 +336,7 @@ form .haveAccount a:active{
         flex-direction: column;
         flex-wrap: wrap;
         width: 50%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .form-row input[type="text"], .form-row input{
@@ -342,12 +345,15 @@ form .haveAccount a:active{
 
     form button{
         align-self: flex-start;
-        padding: 10px 10px;
-        font-size: 16px;
+        margin-left: 60px;
+        width: 50%;
+        padding: 10px 20px;
+        font-size: clamp(24px, 50%, 100rem);
     }
 
     form .haveAccount{
+        padding: 0px 60px;
         text-align: left;
-        font-size: 16px;
+        font-size: clamp(20px, 50%, 100rem);
     }
 }
