@@ -5,8 +5,6 @@ const password = document.querySelector('.pwd');
 
 password.addEventListener('input', checkPasswordStrength);
 
-console.log(password);
-
 submitButton.addEventListener('click', checkPasswordMatch);
 
 
@@ -53,7 +51,6 @@ function checkPasswordStrength(e) {
     } else {
         return spanShowMessage.textContent = `Now this is a password that is hard to guess! ${tips}`;
     }
-    console.log(strength);
 }
 
 function checkPasswordMatch(event) {
