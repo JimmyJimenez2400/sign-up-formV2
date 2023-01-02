@@ -219,3 +219,9 @@ form .haveAccount a{
 form .haveAccount a:active{
     color: var(--dirty-green-color);
 }
+
+.notMatchPassword{
+    background-color: black;
+    color: white;
+    width: 50%;
+}
