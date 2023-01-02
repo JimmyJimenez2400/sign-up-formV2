@@ -84,6 +84,7 @@ input, button{
     height: (--mobile-logo);
     text-align: center;
     width: 100%;
+    flex: 1;
 }
 
 
@@ -122,6 +123,7 @@ input, button{
     flex-direction: column;
     width: 100%;
     height: var(--main);
+    flex: 1;
 }
 
 header > h3, header > p{
@@ -141,6 +143,7 @@ form{
 
 fieldset{
     position: relative;
+    flex: 1;
     margin-bottom: 50px;
     border: none;
     box-shadow: 0px 0px 30px rgba(4, 4, 4, 0.4);
@@ -162,11 +165,13 @@ fieldset h3{
 .form-row label{
     margin-bottom: 10px;
     text-transform: uppercase;
+    flex: 1;
 }
 
 .form-row input[type="text"]{
     width: 100%;
     border: 1px solid #333;
+    flex: 1;
 }
 
 .form-row input[type="text"]:focus, input[type="email"]:focus{
@@ -203,6 +208,7 @@ form button{
     cursor: pointer;
 }
 
+
 form button:hover{
     background-color: var(--dirty-green-color);
 }
@@ -231,7 +237,9 @@ form .haveAccount a:active{
 }
 
 
-@media only screen and (min-width: 768px){
+@media only screen and (min-width: 700px){
+
+
     body{
         display: flex;
         align-items: center;
@@ -240,9 +248,12 @@ form .haveAccount a:active{
         width: 100vw;
         height: 100vh;
         line-height: calc(1.3rem + 0.5vw);
-        font-size: calc(16px + 1vw)
+        font-size: calc(16px + 0.2vw)
       
     }
+
+    
+
 
     .container{
         display: flex;
@@ -256,6 +267,7 @@ form .haveAccount a:active{
 
     #mobile-logo{
         height: 100%;
+        flex: 1;
     }
 
     .mobile-backgroundImg{
@@ -271,12 +283,14 @@ form .haveAccount a:active{
     #form-container{
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        flex: 2;
         height: 100%;
         width: 100%;
     }
 
     .intro-form-header h3{
-        font-size: clamp(24px, 50%, 5rem);
+        font-size: clamp(24px, 50%, 20rem);
         margin-bottom: 20px;
     }
 
@@ -289,30 +303,51 @@ form .haveAccount a:active{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height: 100%;
+       
     }
 
     fieldset{
-        margin-bottom: 40px;
+        margin-bottom: 0px;
+        flex: 0;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-self: start;
+        flex-wrap: wrap;
     }
 
     .form-row label{
         margin-bottom: 0;
+        flex: 1;
+    }
+
+    .form-row input{
+        flex: 1;
+        width: 100%;
     }
 
     .form-row{
         display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        margin-bottom: 0;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .form-row input[type="text"], .form-row input{
+        width: 80%;
     }
 
     form button{
+        align-self: flex-start;
         padding: 10px 10px;
         font-size: 16px;
     }
 
     form .haveAccount{
+        text-align: left;
         font-size: 16px;
     }
 }
